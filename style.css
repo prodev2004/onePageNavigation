@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100vh;
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    padding: 0 1.5vw;
+}
+a:hover {
+    color: #ffa012;
+}
+.content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 5vw;
+    width: 95vw;
+    height: 100vh;
+}
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 10000ms ease-in-out left;
+}
+.page * {
+    color: #fff;
+    text-shadow: 0 0 .3rem rgba(255, 255, 255, .3);
+}
+.page i {
+    font-size: 10rem;
+    margin: 2rem 0;
+}
+#page1 {
+    background-color: #ffa012;
+}
+#page2 {
+    background-color: #6495ed;
+    left: 100%;
+}
+#page3 {
+    background-color: #483d8b;
+    left: 100%;
+}
+
+#partners:target ~ .content #page2,
+#contact:target ~ .content #page3 {
+    left: 0;
+}
+
+#home:target,
+#home:hover { color: #ffa012; }
+
+#partners:target,
+#partners:hover { color: #6495ed; }
+
+#contact:target,
+#contact:hover { color: #483d8b; }
